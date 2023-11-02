@@ -1,0 +1,21 @@
+$white: #fff;
+$logoColor:#FF3C16;
+.login-container {
+    background-image: url("../../assets/login_bg.png");
+    background-size: cover;
+    height: 100%;
+    form {
+        opacity: 0.6;
+        button {
+            text-transform: uppercase;
+        }
+    }
+    .heading-section {
+        color: $white;
+    }
+    nav {
+        .header-logo {
+            color: $logoColor
+        }
+    }
+}
