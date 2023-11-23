@@ -1,13 +1,16 @@
 import { NgModule } from "@angular/core";
 import { LoadingComponent } from "./loading/loading.component";
 import { CommonModule } from "@angular/common";
+import { SlideComponent } from "./slide/slide.component";
 
 @NgModule({
   exports: [
-    LoadingComponent
+    LoadingComponent,
+    SlideComponent
   ],
   declarations: [
-    LoadingComponent
+    LoadingComponent,
+    SlideComponent
   ],
   imports: [
     CommonModule

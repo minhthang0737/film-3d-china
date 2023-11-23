@@ -1,3 +1,5 @@
+$height-header: 100px;
+$height-nav:0px;
 default-header {
     display: block;
     position: fixed;
@@ -7,4 +9,23 @@ default-header {
     background-color: #2b2b31;
     box-shadow: 0 5px 25px 0 rgba(0,0,0,0.2);
     z-index: 101;
+    height: 100px;
+    overflow: hidden;
 }
+default-main {
+    &.content-main {
+        position: relative;
+        top: calc($height-header + $height-nav + 10px);
+    }
+}
+
+default-navbar {
+    display: block;
+    height: $height-nav;
+}
+@media screen and (orientation: landscape) {
+    .carousel img {
+      height: 100vh;
+    }
+  }
+  
