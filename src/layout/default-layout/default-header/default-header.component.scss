@@ -1,0 +1,18 @@
+div {
+    &.navbar {
+        a {
+            img {
+                max-width: 100px;
+                height: 70px
+            }
+        }
+        .navbar-brand {
+            color: #fff !important;
+        }
+    }
+    &.menu-nav {
+        a {
+            color: #fff !important;
+        }
+    }
+}

@@ -5,3 +5,5 @@ export const title : Map<string, string> = new Map([
 ])
 
 export const getName = () => {}
+
+export const urlHome = () => window.location.origin || "#";

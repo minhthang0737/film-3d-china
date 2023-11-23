@@ -9,13 +9,13 @@ import { ApiHttpService } from 'src/service/api_http_service';
 })
 export class DashboarComponent {
   constructor(private apiService: ApiHttpService){
-    this.apiService.get("https://ophim1.com/danh-sach/phim-moi-cap-nhat", {page: 1})
-    .then(result => {
-      console.log(result); // An instance of MyData
-    })
-    .catch(error => {
-      console.error(error);
-    });
+    // this.apiService.get("https://ophim1.com/danh-sach/phim-moi-cap-nhat", {page: 1})
+    // .then(result => {
+    //   console.log(result); // An instance of MyData
+    // })
+    // .catch(error => {
+    //   console.error(error);
+    // });
   }
 
 }

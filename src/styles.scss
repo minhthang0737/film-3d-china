@@ -34,11 +34,10 @@ $film-3d-china-theme: mat.define-light-theme((
 @include mat.all-component-themes($film-3d-china-theme);
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Importing Bootstrap SCSS file. */
 @import '/node_modules/bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 $white: #fff;
 $silver: #f0f0f0;
@@ -47,3 +46,13 @@ $gray: #444;
 $light-black: #484747a6;
 $black: rgb(43, 43, 43);
 $fontSize: 13.5px;
+$bg-color-dark-custom: #2b2b31;
+$text-color-dark: #fff;
+
+html, body { height: 100%; }
+body {
+  margin: 0; 
+  background-color: $bg-color-dark-custom;
+  color: $text-color-dark;
+}
+

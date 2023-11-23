@@ -11,17 +11,29 @@ import { AdminLayoutComponent } from 'src/layout/admin-layout/admin-layout.compo
 import { SidebarAdminComponent } from 'src/layout/admin-layout/sidebar-admin/sidebar-admin.component';
 import { NavBarAdminComponent } from 'src/layout/admin-layout/nav-bar-admin/nav-bar-admin.component';
 import { FooterAdminComponent } from 'src/layout/admin-layout/footer-admin/footer-admin.component';
+import { DefaultHeaderComponent } from 'src/layout/default-layout/default-header/default-header.component';
+import { DefaultMainComponent } from 'src/layout/default-layout/default-main/default-main.component';
+import { DefaultFooterComponent } from 'src/layout/default-layout/default-footer/default-footer.component';
+import { DefaultModule } from 'src/modules/default/default.module';
+import { DefaultLayoutComponent } from 'src/layout/default-layout/default-layout.component';
+import { DefaultNavbarComponent } from 'src/layout/default-layout/default-navbar/default-navbar.component';
 
 const COMPONENT_USED = [
   LoginComponent,
   AdminLayoutComponent,
+  DefaultLayoutComponent,
   SidebarAdminComponent,
   NavBarAdminComponent,
-  FooterAdminComponent
+  FooterAdminComponent,
+  DefaultHeaderComponent,
+  DefaultMainComponent,
+  DefaultNavbarComponent,
+  DefaultFooterComponent
 ]
 const MODULES_USED = [
   ComponentsModule,
-  AdminModule
+  AdminModule,
+  DefaultModule
 ]
 @NgModule({
   declarations: [

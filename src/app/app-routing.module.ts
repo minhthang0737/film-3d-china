@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from 'src/layout/admin-layout/admin-layout.component';
+import { DefaultLayoutComponent } from 'src/layout/default-layout/default-layout.component';
 import { LoginComponent } from 'src/modules/login/login.component';
 
 const routes: Routes = [
@@ -14,7 +15,13 @@ const routes: Routes = [
     data: {
       title: 'Home'
     },
-    children: []
+    component: DefaultLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('src/modules/default/default.module').then(m => m.DefaultModule)
+      }
+    ]
   },
   {
     path: 'login',
