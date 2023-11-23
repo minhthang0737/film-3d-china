@@ -8,6 +8,11 @@ import { SideBarGroupDatas } from './data/sidebar-data';
 })
 export class SidebarAdminComponent {
   public sidebarDatas = SideBarGroupDatas
-  
-  constructor() {}
+  public expan = false;
+  constructor() {
+  }
+
+  public onClickExpan(index : number) {
+      this.sidebarDatas[index].expan = !this.sidebarDatas[index].expan
+  }
 }

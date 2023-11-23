@@ -1,9 +1,43 @@
 <div class="sidebar-content">
-    <ul class="nav nav-tabs flex-column">
-        <ng-container *ngFor="let item of sidebarDatas">
+    <ul class="nav flex-column">
+        <ng-container *ngFor="let item of sidebarDatas, index as index">
             <li class="nav-item">
-                <a class="nav-link collapsed" aria-current="page" href="#">Active</a>
-                <i class="bi bi-arrow-left-circle-fill"></i>
+                <span>
+                    <span>
+                    <a 
+                        [ngClass]="{
+                            'nav-link': true
+                        }"
+                        aria-current="page" [attr.href]="item.link ? item.link : undefined">
+                        <i class="bi {{item.icon}}"></i>
+                        {{item.name}}
+                    </a></span>
+                    <span *ngIf="item.children && item.children.length > 0" 
+                        [ngClass]="{
+                            up: !item.expan
+                        }" (click)="onClickExpan(index)">
+                        <i class="bi bi-chevron-down"></i>
+                    </span>
+                </span>
+                <div *ngIf="item.children && item.children.length > 0 && item.expan" class="wrap-subItem ms-3">
+                    <ul class="nav flex-column">
+                        <ng-container item.children *ngFor="let subItem of item.children">
+                            <li class="nav-item">
+                                <a 
+                                    [ngClass]="{
+                                        'nav-link': true,
+                                        'active': subItem.active
+                                    }" 
+                                    aria-current="page" [href]="subItem.link">
+                                    <i class="bi {{subItem.icon}}"></i>
+                                    {{subItem.name}}
+                                </a>
+                            </li>
+                        </ng-container>
+
+                    </ul>
+                </div>
+
             </li>
         </ng-container>
     </ul>

@@ -1,0 +1,16 @@
+.sidebar-content {
+    li {
+        &.nav-item {
+            & > span {
+                display: flex;
+                align-items: baseline
+            }
+            span {
+                &.up {
+                    transform: rotate(180deg);
+                    transition: transform 0.3s;
+                }
+            }
+        }
+    }
+}
