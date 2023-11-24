@@ -17,6 +17,7 @@ import { DefaultFooterComponent } from 'src/layout/default-layout/default-footer
 import { DefaultModule } from 'src/modules/default/default.module';
 import { DefaultLayoutComponent } from 'src/layout/default-layout/default-layout.component';
 import { DefaultNavbarComponent } from 'src/layout/default-layout/default-navbar/default-navbar.component';
+import { FilmModule } from 'src/modules/pages/film/film.module';
 
 const COMPONENT_USED = [
   LoginComponent,
@@ -33,7 +34,7 @@ const COMPONENT_USED = [
 const MODULES_USED = [
   ComponentsModule,
   AdminModule,
-  DefaultModule
+  DefaultModule,
 ]
 @NgModule({
   declarations: [
