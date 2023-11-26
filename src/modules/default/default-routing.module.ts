@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../pages/home/home.component';
-import { FilmComponent } from '../pages/film/film.component';
+import { DefaultComponent } from './default.component';
 
 const routes: Routes = [
   { 
@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   { 
     path: 'film', 
-    component: FilmComponent,
+    component: DefaultComponent,
     children: [
       {
         path: '',

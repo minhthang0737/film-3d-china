@@ -1,0 +1,42 @@
+.container {
+    .wraper-info {
+        .left-info {
+            article {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .right-info {
+            .title {
+                h4 {
+                    color: #ad8eeb;
+                }
+                p {
+                    color: #86bde5d1;
+                }
+            }
+            .table-info {
+                th.col1 {
+                    width: 30%;
+                }
+                tbody {
+                    tr {
+                        td:nth-child(1) {
+                            color: #0dcaf0;
+                        }
+                        td:nth-child(2) {
+                            color: #34ceed;
+                        }
+                        border-top: 1px solid #475e77;
+                        border-bottom: 1px solid #475e77;
+                    }
+                }
+            }
+        }
+        background-color: #1f232338;
+        border-radius: 10px 10px;
+        overflow: hidden;
+    }
+}

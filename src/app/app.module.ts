@@ -34,7 +34,6 @@ const COMPONENT_USED = [
 const MODULES_USED = [
   ComponentsModule,
   AdminModule,
-  DefaultModule,
 ]
 @NgModule({
   declarations: [
