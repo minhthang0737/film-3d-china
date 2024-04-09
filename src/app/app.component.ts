@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { title } from 'src/util/MasterData';
+import { titles } from 'src/util/MasterData';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   constructor(private title: Title) {}
   
   ngOnInit(): void {
-    const value = title.get(window.location.pathname)
+    const value = titles.get(window.location.pathname)
     this.title.setTitle(value ? value : "Film3dChina")
   }
 }
